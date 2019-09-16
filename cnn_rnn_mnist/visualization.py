@@ -28,4 +28,5 @@ def plot_with_labels(low_d_weights, labels):
 def get_digit_picture(data, label):
     plt.imshow(data.numpy(), cmap='gray')
     plt.title('%i' % label)
-    plt.show()
+    plt.pause(1)
+

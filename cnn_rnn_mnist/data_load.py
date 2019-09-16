@@ -7,7 +7,7 @@ import torchvision      # 数据库模块
 torch.manual_seed(1)    # reproducible
 
 
-MODEL_PATH = os.path.join(os.getcwd(), 'model')
+MODEL_PATH = os.path.join(os.getcwd(), 'model_dump')
 if not os.path.exists(MODEL_PATH):
     os.makedirs(MODEL_PATH)
 BATCH_SIZE = 100

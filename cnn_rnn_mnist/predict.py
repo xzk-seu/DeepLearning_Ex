@@ -20,9 +20,7 @@ def net_predict(net, data_num, is_rnn):
             # 对于CNN tensor shape为[1, 1, 28, 28]
         test_output, last_layer = net(input_x.cuda())
         _, pred_y = torch.max(test_output, dim=1)  # 在第一个维度上的最大值以及索引
-        pred_y = int(pred_y)
-
-        print('picture: #%d | this number is %d | prediction is %d\n' % (n, y, pred_y))
+        print('picture: #%d | this number is %d | prediction is %d\n' % (n, y, int(pred_y)))
         get_digit_picture(x.squeeze(), y)
     plt.ioff()
     plt.show()
